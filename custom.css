@@ -1,0 +1,41 @@
+html, body {
+	height: 100%;
+	color:#333;
+	/* https://leaverou.github.io/css3patterns/#microbial-mat */
+	background:
+		radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+		radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px),
+		#8a3;
+	background-size: 20px 20px;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+#gebot {
+	font-weight:bold;
+	color:red;
+}
+#nextMF {
+	font-style: italic;
+}
+
+#bieter {
+	font-weight:bold;
+}
+
+#maifrau_gebot {
+	font-weight:bold;
+}
+
+.live {
+	padding:3em;
+	color:green;
+}
+
+.inner {
+	background-color:#DDD;
+	border-radius:2em;
+}

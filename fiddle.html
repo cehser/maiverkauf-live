@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Maigesellschaft Derichsweiler - Maiverkauf 2019</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./custom.css" crossorigin="anonymous">
+
+    <script
+        src="./jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="./csv.min.js" crossorigin="anonymous"></script>
+    <script>
+      function loadCSV(json) {
+        let verkaufsbuch = [];
+        CSV.fetch({
+            url: './verkaufsbuch.csv'
+          }).done(function(dataset) {
+          // dataset object doc'd below
+          console.log(dataset);
+
+          //assoziatives Array erzeugen
+          for (let row in dataset.records) {
+             verkaufsbuch[dataset.records[row][0]] = dataset.records[row][1];
+          }
+          console.log(verkaufsbuch);
+          loadData(verkaufsbuch, json);
+        });
+      }
+
+      function loadJSON() {
+        console.log("loading JSON");
+        $.getJSON( "./data.json")
+          .done(function( json ) {
+            console.log("JSON loaded");
+            console.log(json);
+            loadCSV(json);
+          })
+          .fail(function() {
+            console.log( "error" );
+          });
+      }
+
+      function loadData(verkaufsbuch, json) {
+        console.log("Hauptroutine");
+        console.log(verkaufsbuch);
+        console.log(json)
+
+
+        $("#bieter").text(json.bieter);
+        $("#gebot").text(json.gebot);
+        $("#maifrau").text(json.maifrau);
+        $("#maifrau_gebot").text(verkaufsbuch[json.id]);
+        $("#nextMF").text(verkaufsbuch[json.id+1]);
+      }
+
+      $( document ).ready( function() {
+        $.ajaxSetup({ cache: false });
+        window.setInterval(loadJSON, 3000);
+      } );
+    </script>
+  </head>   
+  <body>
+    <div class="container fill">
+      <div class="row h-100">
+        <div class="col-sm-12 my-auto">
+          <div class="container inner">
+            <div class="row align-items-center">
+              <div class="col">
+               <h1 class="text-center">Maiverkauf 2019</h1>
+             </div>
+            </div>
+            <div class="row live">
+              <div class="col">
+                <h2 class="text-center">Live: <span id="maifrau">Anita Schmitz</span></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="text-center">Höchstgebot: </h3>
+                <p class="text-center">
+                  <span id="bieter">Jens Thelen</span> bot <span id="gebot">50.000 Maße</span> für <span id="maifrau_gebot">Test Test</span>!
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p class="text-center">
+                Nächste Maifrau:&nbsp;<span id="nextMF">Lang Griet</span>
+                <p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--JS only if needed
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>-->
+  </body>
+
+</html>
