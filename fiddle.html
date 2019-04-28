@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Maigesellschaft Derichsweiler - Maiverkauf 2019</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap.min.css" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./custom.css" crossorigin="anonymous">
 
@@ -50,6 +50,13 @@
         console.log(verkaufsbuch);
         console.log(json)
 
+        json = {
+          "bieter": "Max Quintel",
+          "gebot": "3.500 Maße",
+          "maifrau": "Lang Griet",
+          "id": 4
+        }
+
 
         $("#bieter").text(json.bieter);
         $("#gebot").text(json.gebot);
@@ -60,6 +67,7 @@
 
       $( document ).ready( function() {
         $.ajaxSetup({ cache: false });
+        $("#bieter").text("load");
         window.setInterval(loadJSON, 3000);
       } );
     </script>
@@ -67,7 +75,7 @@
   <body>
     <div class="container fill">
       <div class="row h-100">
-        <div class="col-sm-12 my-auto">
+        <div class="col-sm-12" style="margin-top: 50px">
           <div class="container inner">
             <div class="row align-items-center">
               <div class="col">
@@ -83,7 +91,7 @@
               <div class="col">
                 <h3 class="text-center">Höchstgebot: </h3>
                 <p class="text-center">
-                  <span id="bieter">Jens Thelen</span> bot <span id="gebot">50.000 Maße</span> für <span id="maifrau_gebot">Test Test</span>!
+                  <span id="bieter">Jens Thelen</span> bot <span id="gebot">50.001 Maße</span> für <span id="maifrau_gebot">Test Test</span>!
                 </p>
               </div>
             </div>
