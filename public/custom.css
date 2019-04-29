@@ -7,6 +7,7 @@ html, body {
 		radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, #4e8507 10px, rgba(96, 16, 48, 0) 11px),
 		#8a3;
 	background-size: 20px 20px;
+	font-size: 24pt;
 }
 
 .fill { 
@@ -16,7 +17,7 @@ html, body {
 
 #gebot {
 	font-weight:bold;
-	color:red;
+	color:green;
 }
 #nextMF {
 	font-style: italic;
