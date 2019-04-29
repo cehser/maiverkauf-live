@@ -1,0 +1,25 @@
+{
+  "name": "maiverkauf-npm",
+  "version": "1.0.0",
+  "description": "Webapp für den Maiverkauf in Derichsweiler",
+  "main": "index.js",
+  "dependencies": {
+    "csv-parser": "^2.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cehser/maiverkauf-live.git"
+  },
+  "author": "Christoph Eßer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cehser/maiverkauf-live/issues"
+  },
+  "homepage": "https://github.com/cehser/maiverkauf-live#readme"
+}

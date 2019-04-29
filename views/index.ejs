@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Maigesellschaft Derichsweiler - Maiverkauf 2019</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap.min.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./custom.css" crossorigin="anonymous">
+  </head>   
+  <body>
+    <div class="container fill">
+      <div class="row h-100">
+        <div class="col-sm-12" style="margin-top: 50px">
+          <div class="container inner">
+            <div class="row align-items-center">
+              <div class="col">
+               <h1 class="text-center">Maiverkauf 2019</h1>
+             </div>
+            </div>
+            <div class="row live">
+              <div class="col">
+                <h2 class="text-center">Live: <span id="maifrau">
+                  <% if(maifrau !== null){ %>
+                    <%= maifrau %>
+                  <% } %>
+                  </span></h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="text-center">Höchstgebot: </h3>
+                <p class="text-center">
+                  <span id="bieter">
+                  <% if(bieter !== null){ %>
+                    <%= bieter %>
+                  <% } %>
+                  </span> bot <span id="gebot">
+                    <% if(gebot !== null){ %>
+                      <%= gebot %>
+                    <% } %>
+                  </span> für <span id="maifrau_gebot">
+                    <% if(maifrau_gebot !== null){ %>
+                      <%= maifrau_gebot %>
+                    <% } %>
+                  </span>!
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p class="text-center">
+                Nächste Maifrau:&nbsp;<span id="nextMF">
+                  <% if(nextMF !== null){ %>
+                    <%= nextMF %>
+                  <% } %></span>
+                <p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
