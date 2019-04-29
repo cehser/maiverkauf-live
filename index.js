@@ -35,6 +35,16 @@ app.get('/', function (req, res) {
     let maifrau = verkaufsbuch[config.id]
     let nextMF = verkaufsbuch[config.id+1]
 
+    if(config.blind)
+    {
+      maifrau = "BLIND"
+    }
+
+    if(config.blind_next)
+    {
+      nextMF = "BLIND"
+    }
+
     res.render('index', {bieter: bieter, gebot: gebot, maifrau_gebot: maifrau_gebot, maifrau: maifrau, nextMF : nextMF})
   });
 })

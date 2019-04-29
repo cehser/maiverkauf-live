@@ -2,5 +2,7 @@
   "bieter": "Max Quintel",
   "gebot": "3.500 Maße",
   "maifrau": "Lang Griet",
-  "id": 4
+  "id": 4,
+  "blind": true,
+  "blind_next": true
 }
