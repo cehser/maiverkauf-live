@@ -6,9 +6,4 @@ Live-Daten zum Maiverkauf auf dem Display:
 * Zum Verkauf stehende Maifrau
 * Nächste Maifrau
 
-### Credits:
-* https://github.com/okfn/csv.js
-
-* https://jquery.com/
-
-* https://getbootstrap.com/
+V2 rewriten based on NodeJS
