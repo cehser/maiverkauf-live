@@ -1,8 +1,9 @@
 {
-  "bieter": "Max Quintel",
-  "gebot": "3.500 Maße",
-  "maifrau": "Lang Griet",
-  "id": 4,
-  "blind": true,
-  "blind_next": true
+  "bieter": "Philipp Kurth",
+  "gebot": "68.000",
+  "maifrau": "Linda Schwarzenberg",
+  "id": 158
+,
+  "blind": false,
+  "blind_next": false
 }

@@ -7,7 +7,8 @@ html, body {
 		radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, #4e8507 10px, rgba(96, 16, 48, 0) 11px),
 		#8a3;
 	background-size: 20px 20px;
-	font-size: 24pt;
+	font-size: 30pt;
+	font-family: Verdana;
 }
 
 .fill { 
@@ -21,6 +22,7 @@ html, body {
 }
 #nextMF {
 	font-style: italic;
+	font-weight:bold;
 }
 
 #bieter {
@@ -34,9 +36,20 @@ html, body {
 .live {
 	padding:3em;
 	color:green;
+	font-weight:900 !important;
 }
 
 .inner {
 	background-color:#DDD;
 	border-radius:2em;
+}
+
+
+h1 {
+	font-weight:700 !important;
+}
+
+
+h2 {
+	font-weight:700 !important;
 }

@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
   let csv_data = []
 
   fs.createReadStream(csv_path)
-  .pipe(csv())
+  .pipe(csv({separator:'\t'}))
   .on('data', (data) => csv_data.push(data))
   .on('end', () => {
     //console.log(csv_data);
